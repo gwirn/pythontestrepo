@@ -19,8 +19,8 @@ jobs:
         run: pip install bandit
       - name: Run Bandit
         run: |
-          bandit -r ./app 2>&1 | tee .bandit.log
-          num=$(grep "Severity: High" .bandit.log | wc -l)
-          if [ ! "$num" -eq 0 ];then
+          bandit -r . 2>&1 | tee .bandit.log
+          ret_code=$(grep "Severity: High" .bandit.log | wc -l)
+          if [ ! "$ret_code" -eq 0 ];then
             exit 1
           fi
