@@ -1,6 +1,6 @@
 # has security vulnerability
 gradio == 5.30.*
 # is too old
-tensorflow == 2.16.*
+tensorflow == 2.20.*
 
 numpy
