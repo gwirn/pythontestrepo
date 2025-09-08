@@ -1,0 +1,16 @@
+name: Bandit
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  pip-audit:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: pypa/gh-action-pip-audit@v1.0.0
+          with:
+            inputs: requirements.txt
+            
