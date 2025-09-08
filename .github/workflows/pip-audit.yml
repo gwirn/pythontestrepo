@@ -18,4 +18,8 @@ jobs:
         run: pip install pip-audit
       - name: Run pip-audit
         run: |
+          if [ -f ./requirements.txt ];then
           pip-audit -r ./requirements.txt
+          else
+          echo 'WARNING: NO requirements.txt present'
+          fi
