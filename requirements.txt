@@ -1,5 +1,5 @@
 # has security vulnerability
-gradio == 5.30.*
+gradio == 4.44.*
 # is too old
 tensorflow == 2.16.*
 
