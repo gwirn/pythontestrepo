@@ -20,7 +20,7 @@ jobs:
       - name: Run Bandit
         run: |
           bandit -r . 2>&1 | tee .bandit.log
-          ret_code=$(grep "Severity: High" .bandit.log | wc -l)
-          if [ ! "$ret_code" -eq 0 ];then
+          n_sev=$(grep "Severity: High" .bandit.log | wc -l)
+          if [ ! "$n_sev" -eq 0 ];then
             exit 1
           fi
